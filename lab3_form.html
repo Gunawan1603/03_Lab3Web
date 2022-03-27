@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Lanjutan</title>
+</head>
+<body>
+    <header>
+        <h1>Membuat Form</h1>
+    </header>
+    <form action="proses.php" method="post">
+        <fieldset>
+            <legend>Data Pelanggan</legend>
+            <p>
+               <label for="nama">Nama</label>
+               <input type="text" id="nama" name="nama">
+            </p>
+            <p>
+               <label for="alamat">Alamat</label>
+               <textarea id="alamat" name="alamat" cols="20" rows="3"></textarea>
+            </p>
+            <p>
+               <label>Jenis Kelamin</label>
+               <input id="jk_l" type="radio" name="kelamin" value="L" /><label
+    for="jk_l">Laki-laki</label>
+                <input id="jk_p" type="radio" name="kelamin" value="P" /><label
+    for="jk_p">Perempuan</label>
+            </p>
+            <p><input type="submit" value="Login"></p>
+        </fieldset>
+    </form>
+    <style>
+        form p > label {
+             display: inline-block;
+             width: 100px;
+        }
+        form input[type="text"], form textarea {
+             border: 1px solid #197a43;
+        }
+        form input[type="submit"] {
+            border: 1px solid #197a43;
+            background-color: #197a43;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 5px 15px;
+        }
+    </style>
+    <p>
+    <form action="proses_input" method="get">
+        Pilih Bulan Lahir Anda :
+        <select name="bulanlahir">
+         <option value="Januari">Januari</option>
+         <option value="Februari">Februari</option>
+         <option value="Maret">Maret</option>
+         <option value="April">April</option>
+         <option value="Mei">Mei</option>
+         <option value="Juni">Juni</option>
+         <option value="Juli">Juli</option>
+         <option value="Agustus">Agustus</option>
+         <option value="September">September</option>
+         <option value="Oktober">Oktober</option>
+         <option value="November">November</option>
+         <option value="Desember">Desember</option>
+       </select><br><br>
+      </form>
+    </p>
+    <P>
+        <form action="proses_input" method="get">
+            Pilih Hobi Kesukaan Anda :<br>
+            <select name="namaHobi" multiple>
+             <option value="Sepakbola">Sepakbola</option>
+             <option value="Bulutangkis">Bulutangkis</option>
+             <option value="Renang">Renang</option>
+             <option value="Bersepeda">Bersepeda</option>
+             <option value="Musik">Musik</option>
+            </select><br><br>
+           <input type="submit">
+          </form>
+    </P>
+</body>
+</html>
